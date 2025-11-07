@@ -20,8 +20,8 @@ public class CalcPi {
 				//System.out.println("first try:" + result);
 
 	}
-	System.out.println("pi according to Java" + piValue);
-	System.out.println("pi, approximated:" + (4.0 * result));
+	System.out.println("pi according to Java: " + piValue);
+	System.out.println("pi, approximated: " + (4.0 * result));
 
 	}
 }
