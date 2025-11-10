@@ -4,20 +4,28 @@ public class Collatz {
         String mode = args[1];
 
         for (int seed = 1; seed <= N; seed++) {
-            int n = seed; 
-            int count = 1; 
+			int n = seed;
+            int count = 1;
             if (mode.equals("v")) {
-                System.out.print(n + " ");
+                System.out.print(n+ " ");
             }
+			if (n ==1){
+				n=4;
+				count++; 
+				if (mode.equals("v")) System.out.print(n+ " ");
+				}
+
+			
             while (n != 1) {
+				count =count+1;
                 if (n % 2 == 0) {
-                    n = n / 2;
+                    n=n / 2;
                 } else {
-                    n = 3 * n + 1;
+                    n = 3 * n+ 1;
                 }
-                count++;
+				count++;
                 if (mode.equals("v")) {
-                    System.out.print(n + " ");
+                    System.out.print(n+ " ");
                 }
             }
 
@@ -25,7 +33,11 @@ public class Collatz {
                 System.out.println("(" + count + ")");
             }
 		}
-        System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
+		System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
+
+		
+
+		}
 		
     }
-}
+
