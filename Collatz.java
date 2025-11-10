@@ -17,7 +17,6 @@ public class Collatz {
 
 			
             while (n != 1) {
-				count =count+1;
                 if (n % 2 == 0) {
                     n=n / 2;
                 } else {
